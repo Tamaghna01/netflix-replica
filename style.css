@@ -1,0 +1,271 @@
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: #000;
+    color: #fff;
+    overflow-x: hidden;
+}
+
+.hero {
+    position: relative;
+    height: 100vh;
+    background: url('https://assets.nflxext.com/ffe/siteui/vlv3/dace47b4-ad7d-452a-9993-ad1b52140c9f/8e898492-d6ba-4a30-89dc-5f21f153f3e2/IN-en-20230911-popsignuptwoweeks-perspective_alpha_website_large.jpg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 950px;
+    padding: 0 3%;
+}
+
+.hero h1 {
+    font-size: 3.2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.hero h3 {
+    font-size: 1.6rem;
+    font-weight: 400;
+    margin-bottom: 1.5rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    z-index: 10;
+}
+
+.logo {
+    color: #e50914;
+    font-size: 2rem;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding-right: 60px;
+}
+
+.language-select {
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    border: 1px solid #aaa;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.signin-btn {
+    background-color: #e50914;
+    color: #fff;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.signin-btn:hover {
+    background-color: #c40812;
+}
+
+.get-started-form {
+    display: flex;
+    justify-content: center;
+    max-width: 700px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.email-input {
+    flex-grow: 1;
+    padding: 18px 10px;
+    font-size: 1rem;
+    border: 1px solid #8c8c8c;
+    border-radius: 5px 0 0 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    min-width: 250px;
+}
+
+.email-input::placeholder {
+    color: #ccc;
+}
+
+.get-started-btn {
+    background-color: #e50914;
+    color: #fff;
+    padding: 18px 25px;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    font-size: 1.6rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.get-started-btn:hover {
+    background-color: #c40812;
+}
+
+.content-sections {
+    padding: 50px 5%;
+}
+
+.trending-section {
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.trending-list {
+    display: flex;
+    gap: 10px;
+    overflow-x: scroll;
+    padding: 20px 0;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.trending-list::-webkit-scrollbar {
+    display: none;
+}
+
+.movie-card {
+    position: relative;
+    flex-shrink: 0;
+    width: 200px;
+    height: 300px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.movie-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.movie-card:hover {
+    transform: scale(1.05);
+}
+
+.rank {
+    position: absolute;
+    bottom: 5px;
+    left: 5px;
+    font-size: 4rem;
+    font-weight: 700;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    z-index: 10;
+}
+
+.arrow-icon {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 2rem;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 50%;
+    z-index: 20;
+}
+
+.reasons-section {
+    margin-top: 50px;
+}
+
+.reasons-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.reason-card {
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.reason-card h3 {
+    font-size: 1.2rem;
+    margin-top: 0;
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 20px 20px;
+    }
+    .logo {
+        font-size: 1.5rem;
+    }
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    .hero h3 {
+        font-size: 1.2rem;
+    }
+    .hero p {
+        font-size: 1rem;
+    }
+    .get-started-form {
+        flex-direction: column;
+        align-items: center;
+    }
+    .email-input, .get-started-btn {
+        width: 80%;
+        border-radius: 5px;
+        margin-bottom: 15px;
+    }
+    .get-started-btn {
+        font-size: 1.2rem;
+        padding: 15px 20px;
+        width: auto;
+    }
+    .reasons-grid {
+        grid-template-columns: 1fr;
+    }
+}
